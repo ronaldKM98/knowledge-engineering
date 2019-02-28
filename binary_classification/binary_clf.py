@@ -16,20 +16,23 @@ from sklearn.model_selection import train_test_split
 
 debug = False
 
-def random_forest(combinations_iterable,x_df,y_df):
-    linear_models = []
-    binary_models = []
+def random_forest(combinations_iterable,x_train,y_train,x_validation,y_validation):
+    result_models = []
 
     for col in combinations_iterable:
         for i in col:
-            #if debug:
-            print(x_df[list(i)])
-            #features_train = x_df[[list(i)].copy()
-            #new_model = classify(features_train, y);
+            if debug:
+                print(x_df[list(i)])
 
+            features_train = x_train[list(i)].copy()
+            features_validation = x_validation[list(i)].copy()
 
+            forest_cl = classify(features_train.values, y_train.values.ravel());
+            score = forest_cl.score(features_validation.values, y_validation.values.ravel())
 
-    #return linear_models,binary_models
+            result_models.append([list(i),score])
+
+    return result_models
 
 
 def main():
@@ -40,8 +43,15 @@ def main():
 
     combinations_iterable = combinations(list(x))
 
-    random_forest(combinations_iterable,x,y)
+    x_train, x_test, y_train, y_test = train_test_split(df, y, test_size=0.30)
+    x_validation, x_test, y_validation, y_test = train_test_split(x_test, y_test, test_size=0.70)
 
+    print(type(x_validation))
+
+    result_models = random_forest(combinations_iterable,x_train,y_train,x_validation,y_validation)
+
+    for i in result_models:
+        print("Score -> ",i[1]," Combinations -> ",i[0])
 
 def main_test():
     # Read data from file
@@ -117,7 +127,7 @@ def combinations(df):
     print(len(df))
     #combinations = itertools.combinations(df, 10)
     combinations = []
-    for i in range(1, 11):
+    for i in range(1, 4):
         combinations.append(itertools.combinations(df, i))
 
     if debug:
