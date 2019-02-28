@@ -5,6 +5,7 @@ import pylab as pylab
 import numpy as numpy
 import seaborn as sns
 import graphviz
+import itertools
 
 from sklearn import linear_model
 from sklearn import tree
@@ -18,11 +19,12 @@ def main():
     # Read data from file
     df = pandas.read_csv("whitewine.csv", sep=';')
     # explore_data(df)
-
+    
     y = df[['quality']].copy()
     y = y.applymap(lambda x: 1 if x > 5 else 0)
 
     df = df.drop(columns=['quality'])
+    combinations(list(df))
     #print(tabulate(df, headers='keys'))
     #print(tabulate(y, headers='keys'))
 
@@ -83,6 +85,21 @@ def tree_classifier(features_train, labels_train):
     graph'''
     return clf
 
+
+def combinations(df):
+    print(len(df))
+    #combinations = itertools.combinations(df, 10)
+    combinations = []
+    for i in range(1, 11):
+        combinations.append(itertools.combinations(df, i))
+    
+
+    for col in combinations:
+        for i in col:
+            print(i)
+    
+    
+    
 
 if __name__ == '__main__':
     main()
