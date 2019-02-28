@@ -14,12 +14,39 @@ from sklearn.model_selection import train_test_split
 
 # TODO Confusion Matrix -- Distribucion de puntuaciones para el modelo
 
+debug = False
+
+def random_forest(combinations_iterable,x_df,y_df):
+    linear_models = []
+    binary_models = []
+
+    for col in combinations_iterable:
+        for i in col:
+            #if debug:
+            print(x_df[list(i)])
+            #features_train = x_df[[list(i)].copy()
+            #new_model = classify(features_train, y);
+
+
+
+    #return linear_models,binary_models
+
 
 def main():
+    df = pandas.read_csv("whitewine.csv", sep=';')
+
+    y = df[['quality']].copy()
+    x = df.drop(columns=['quality'])
+
+    combinations_iterable = combinations(list(x))
+
+    random_forest(combinations_iterable,x,y)
+
+
+def main_test():
     # Read data from file
     df = pandas.read_csv("whitewine.csv", sep=';')
     # explore_data(df)
-    
     y = df[['quality']].copy()
     y = y.applymap(lambda x: 1 if x > 5 else 0)
 
@@ -92,14 +119,15 @@ def combinations(df):
     combinations = []
     for i in range(1, 11):
         combinations.append(itertools.combinations(df, i))
-    
 
-    for col in combinations:
-        for i in col:
-            print(i)
-    
-    
-    
+    if debug:
+        for col in combinations:
+            for i in col:
+                print(i.items())
+
+    return combinations
+
+
 
 if __name__ == '__main__':
     main()
