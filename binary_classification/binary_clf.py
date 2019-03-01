@@ -127,7 +127,7 @@ def combinations(df):
     print(len(df))
     #combinations = itertools.combinations(df, 10)
     combinations = []
-    for i in range(1, 4):
+    for i in range(1, 12):
         combinations.append(itertools.combinations(df, i))
 
     if debug:
