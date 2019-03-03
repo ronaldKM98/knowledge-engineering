@@ -6,7 +6,6 @@ import numpy as numpy
 import seaborn as sns
 import graphviz
 import itertools
-
 from sklearn import linear_model
 from sklearn import tree
 from tabulate import tabulate
@@ -15,6 +14,7 @@ from sklearn.model_selection import train_test_split
 # TODO Confusion Matrix -- Distribucion de puntuaciones para el modelo
 
 debug = False
+MODELS_NUMBER=5
 
 def random_forest(combinations_iterable,x_train,y_train,x_validation,y_validation):
     result_models = []
@@ -34,7 +34,6 @@ def random_forest(combinations_iterable,x_train,y_train,x_validation,y_validatio
 
     return result_models
 
-
 def main():
     df = pandas.read_csv("whitewine.csv", sep=';')
 
@@ -50,8 +49,41 @@ def main():
 
     result_models = random_forest(combinations_iterable,x_train,y_train,x_validation,y_validation)
 
-    for i in result_models:
-        print("Score -> ",i[1]," Combinations -> ",i[0])
+    mayor = 0
+    model = None
+    index = -1
+    best_models = []
+    for i in range(5):
+        for model_tuple in result_models:
+            if model_tuple[1] > mayor:
+                mayor = model_tuple[1] #Score
+                model = model_tuple[0] #List of Arguments
+                index = model_tuple
+
+        best_models.append([model,mayor])
+        result_models.remove(index)
+        mayor = 0
+
+    print(str(best_models))
+    #combinations_sorted = sorted(combinations_iterable,
+    #   key=lambda score:combinations_iterable[1])
+
+    for i in range(len(best_models)):
+        print("*************************************")
+        x_features = best_models[i][0]
+        print(str(x_features))
+
+        y_test_total = pandas.concat([y_test, y_validation])
+        x_test_total = pandas.concat([x_test, x_validation])
+        print(y_test_total.shape)
+
+        features_train = x_train[x_features].copy()
+        features_test = x_test_total[x_features].copy()
+
+        model_i = classify(features_train.values, y_train.values.ravel())
+        score = model_i.score(features_test.values, y_test_total.values.ravel())
+        print("Model -> " + str(x_features) + " New Score -> " + str(score) + " Old score -> " +
+                str(best_models[i][1]))
 
 def main_test():
     # Read data from file
@@ -66,7 +98,7 @@ def main_test():
     #print(tabulate(y, headers='keys'))
 
     # Split into train - test data
-    x_train, x_test, y_train, y_test = train_test_split(df, y, test_size=0.25)
+    x_train, x_test, x_trainy_train, y_test = train_test_split(df, y, test_size=0.25)
 
     # Train
     binary_model = classify(x_train.values, y_train.values.ravel())
@@ -127,7 +159,7 @@ def combinations(df):
     print(len(df))
     #combinations = itertools.combinations(df, 10)
     combinations = []
-    for i in range(1, 12):
+    for i in range(10, 12):
         combinations.append(itertools.combinations(df, i))
 
     if debug:
@@ -137,7 +169,30 @@ def combinations(df):
 
     return combinations
 
-
-
 if __name__ == '__main__':
     main()
+
+'''
+
+def random_forest(combinations_iterable,x_train,y_train,x_validation,y_validation):
+    arboles_models = []
+    logistic_models = []
+
+    for col in combinations_iterable:
+        for i in col:
+            if debug:
+                print(x_df[list(i)])
+
+            features_train = x_train[list(i)].copy()
+            features_validation = x_validation[list(i)].copy()
+
+            forest_cl = classify(features_train.values, y_train.values.ravel());
+            score = forest_cl.score(features_validation.values, y_validation.values.ravel())
+
+            binary_cl = tree_classifier(features_train.values, y_train.values.ravel());
+            score = forest_cl.score(features_validation.values, y_validation.values.ravel())
+
+            arboles_models.append([list(i),score])
+
+    return result_models
+'''
