@@ -1,0 +1,36 @@
+Score ->  0.6005291005291006  Combinations ->  ['volatile acidity', 'sulphates', 'alcohol']
+Score ->  0.5978835978835979  Combinations ->  ['volatile acidity', 'pH', 'alcohol']
+Score ->  0.5978835978835979  Combinations ->  ['volatile acidity', 'density', 'pH', 'alcohol']
+Score ->  0.5978835978835979  Combinations ->  ['volatile acidity', 'residual sugar', 'density', 'alcohol']
+Score ->  0.5978835978835979  Combinations ->  ['fixed acidity', 'volatile acidity', 'chlorides', 'sulphates', 'alcohol']
+Score ->  0.5978835978835979  Combinations ->  ['fixed acidity', 'volatile acidity', 'pH', 'sulphates', 'alcohol']
+
+['volatile acidity', 'sulphates', 'alcohol']
+3
+Score logistic regression 0.7447619047619047
+Score decision tree 0.7438095238095238
+
+['volatile acidity', 'pH', 'alcohol']
+3
+Score logistic regression 0.7514285714285714
+Score decision tree 0.741904761904762
+
+['volatile acidity', 'density', 'pH', 'alcohol']
+4
+Score logistic regression 0.7371428571428571
+Score decision tree 0.7542857142857143
+
+['volatile acidity', 'residual sugar', 'density', 'alcohol']
+4
+Score logistic regression 0.7657142857142857
+Score decision tree 0.7457142857142857
+
+['fixed acidity', 'volatile acidity', 'chlorides', 'sulphates', 'alcohol']
+5
+Score logistic regression 0.7323809523809524
+Score decision tree 0.7695238095238095
+
+['fixed acidity', 'volatile acidity', 'pH', 'sulphates', 'alcohol']
+5
+Score logistic regression 0.7304761904761905
+Score decision tree 0.7695238095238095
