@@ -1,0 +1,47 @@
+[[['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar', 'chlorides', 'density', 'pH', 'sulphates', 'alcohol'], 0.6084656084656085], [['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar', 'free sulfur dioxide', 'sulphates', 'alcohol'], 0.6058201058201058], [['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar', 'pH', 'sulphates', 'alcohol'], 0.6058201058201058], [['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar', 'chlorides', 'pH', 'sulphates', 'alcohol'], 0.6058201058201058], [['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar', 'free sulfur dioxide', 'density', 'sulphates', 'alcohol'], 0.6058201058201058]]
+*************************************
+['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar', 'chlorides', 'density', 'pH', 'sulphates', 'alcohol']
+(1260, 1)
+Model -> ['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar', 'chlorides', 'density', 'pH', 'sulphates', 'alcohol'] New Score -> 0.5650793650793651 Old score -> 0.6084656084656085
+*************************************
+['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar', 'free sulfur dioxide', 'sulphates', 'alcohol']
+(1260, 1)
+Model -> ['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar', 'free sulfur dioxide', 'sulphates', 'alcohol'] New Score -> 0.5706349206349206 Old score -> 0.6058201058201058
+*************************************
+['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar', 'pH', 'sulphates', 'alcohol']
+(1260, 1)
+Model -> ['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar', 'pH', 'sulphates', 'alcohol'] New Score -> 0.5682539682539682 Old score -> 0.6058201058201058
+*************************************
+['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar', 'chlorides', 'pH', 'sulphates', 'alcohol']
+(1260, 1)
+Model -> ['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar', 'chlorides', 'pH', 'sulphates', 'alcohol'] New Score -> 0.5650793650793651 Old score -> 0.6058201058201058
+*************************************
+['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar', 'free sulfur dioxide', 'density', 'sulphates', 'alcohol']
+(1260, 1)
+Model -> ['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar', 'free sulfur dioxide', 'density', 'sulphates', 'alcohol'] New Score -> 0.5682539682539682 Old score -> 0.6058201058201058
+
+
+['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar', 'chlorides', 'density', 'pH', 'sulphates', 'alcohol']
+9
+Score logistic regression 0.7647619047619048
+Score decision tree 0.7923809523809524
+
+[['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar', 'free sulfur dioxide', 'sulphates', 'alcohol']
+7
+Score logistic regression 0.7561904761904762
+Score decision tree 0.7866666666666666
+
+['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar', 'pH', 'sulphates', 'alcohol']
+7
+Score logistic regression 0.7438095238095238
+Score decision tree 0.7866666666666666
+
+['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar', 'chlorides', 'pH', 'sulphates', 'alcohol']
+8
+Score logistic regression 0.7476190476190476
+Score decision tree 0.7628571428571429
+
+['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar', 'free sulfur dioxide', 'density', 'sulphates', 'alcohol']
+8
+Score logistic regression 0.7552380952380953
+Score decision tree 0.7733333333333333
