@@ -1,0 +1,90 @@
+11
+[[['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar', 'chlorides', 'free sulfur dioxide', 'sulphates', 'alcohol'], 0.6046712840630156], [['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar', 'free sulfur dioxide', 'sulphates', 'alcohol'], 0.6048373440965673], [['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar', 'chlorides', 'free sulfur dioxide', 'pH', 'sulphates', 'alcohol'], 0.6048506652490394], [['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar', 'chlorides', 'free sulfur dioxide', 'total sulfur dioxide', 'sulphates', 'alcohol'], 0.6048923822481643], [['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar', 'free sulfur dioxide', 'pH', 'sulphates', 'alcohol'], 0.6050059049225147]]
+*************************************
+['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar', 'chlorides', 'free sulfur dioxide', 'sulphates', 'alcohol']
+(4200, 1)
+Model -> ['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar', 'chlorides', 'free sulfur dioxide', 'sulphates', 'alcohol'] New RMES -> 0.569686297845392 Old RMSE -> 0.6046712840630156
+Score -> 0.26954370958944596
+*************************************
+['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar', 'free sulfur dioxide', 'sulphates', 'alcohol']
+(4200, 1)
+Model -> ['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar', 'free sulfur dioxide', 'sulphates', 'alcohol'] New RMES -> 0.5700850011764199 Old RMSE -> 0.6048373440965673
+Score -> 0.26903248901549426
+*************************************
+['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar', 'chlorides', 'free sulfur dioxide', 'pH', 'sulphates', 'alcohol']
+(4200, 1)
+Model -> ['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar', 'chlorides', 'free sulfur dioxide', 'pH', 'sulphates', 'alcohol'] New RMES -> 0.5694828890353066 Old RMSE -> 0.6048506652490394
+Score -> 0.26980452197937665
+*************************************
+['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar', 'chlorides', 'free sulfur dioxide', 'total sulfur dioxide', 'sulphates', 'alcohol']
+(4200, 1)
+Model -> ['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar', 'chlorides', 'free sulfur dioxide', 'total sulfur dioxide', 'sulphates', 'alcohol'] New RMES -> 0.5691470174929546 Old RMSE -> 0.6048923822481643
+Score -> 0.2702351791354445
+*************************************
+['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar', 'free sulfur dioxide', 'pH', 'sulphates', 'alcohol']
+(4200, 1)
+Model -> ['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar', 'free sulfur dioxide', 'pH', 'sulphates', 'alcohol'] New RMES -> 0.5698283635184899 Old RMSE -> 0.6050059049225147
+Score -> 0.269361551856395
+
+
+
+#### Top 3
+
+['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar', 'chlorides', 'free sulfur dioxide', 'sulphates', 'alcohol']
+Score linear regression 0.5561839156929166
+
+['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar', 'free sulfur dioxide', 'sulphates', 'alcohol']
+Score linear regression 0.5798734202009902
+
+['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar', 'chlorides', 'free sulfur dioxide', 'pH', 'sulphates', 'alcohol']
+Score linear regression 0.5762886197261887
+
+['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar', 'chlorides', 'free sulfur dioxide', 'total sulfur dioxide', 'sulphates', 'alcohol']
+Score linear regression 0.5559005764360873
+
+
+['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar', 'free sulfur dioxide', 'pH', 'sulphates', 'alcohol']
+Score linear regression 0.5484722015384764
+
+#### Top 2
+
+
+['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar', 'chlorides', 'density', 'pH', 'sulphates', 'alcohol']
+Score linear regression 0.5771683663762002
+
+['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar', 'free sulfur dioxide', 'sulphates', 'alcohol']
+Score linear regression 0.5799273568611412
+
+['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar', 'pH', 'sulphates', 'alcohol']
+Score linear regression 0.5737681029928765
+
+['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar', 'chlorides', 'pH', 'sulphates', 'alcohol']
+Score linear regression 0.5650476079797134
+
+['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar', 'free sulfur dioxide', 'density', 'sulphates', 'alcohol']
+Score linear regression 0.5749447374920871
+
+#### Top 1
+
+
+
+['volatile acidity', 'sulphates', 'alcohol']
+Score linear regression 0.59115537684659
+
+['volatile acidity', 'pH', 'alcohol']
+Score linear regression 0.5814937248338371
+
+['volatile acidity', 'density', 'pH', 'alcohol']
+Score linear regression 0.5700038139292855
+
+['volatile acidity', 'residual sugar', 'density', 'alcohol']
+Score linear regression 0.5576486827741975
+
+['fixed acidity', 'volatile acidity', 'chlorides', 'sulphates', 'alcohol']
+Score linear regression 0.5888219760292581
+
+['fixed acidity', 'volatile acidity', 'pH', 'sulphates', 'alcohol']
+Score linear regression 0.5980967159644685
+
+
+### Top 1 Again
