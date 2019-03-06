@@ -20,5 +20,5 @@ dot_data = tree.export_graphviz(clf, out_file=None,
                 filled=True, rounded=True,  
                 special_characters=True)  
 
-graph = graphviz.Source(dot_data, format='svg')  
+graph = graphviz.Source(dot_data, format='png')
 graph.render()
